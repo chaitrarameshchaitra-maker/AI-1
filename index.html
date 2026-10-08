@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI1 // All-In-One Campus Matrix</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="brand-group">
+      <div class="brand-dot"></div>
+      <div class="brand-text">AI1 <span>// All-In-One Matrix</span></div>
+      <div class="campus-tag">Sapthagiri NPS University</div>
+    </div>
+
+    <div class="user-badge" id="userBadge" onclick="navigateTo('view-profile')">
+      <div class="avatar" id="avatarLetter">T</div>
+      <div>
+        <strong id="headerUserName">Tanish B R</strong>
+        <span class="user-meta-sub" id="headerUserMeta">1st Year CSE • P-Cycle</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace">
+
+    <section id="view-hub" class="app-view active-view">
+      <div class="hero-block">
+        <div class="hero-greeting" id="heroGreeting">Welcome back, Tanish</div>
+        <h1 class="hero-title">All-In-One Campus Operating System</h1>
+        <p class="hero-sub">Select an operational module to manage your schedule, credits, multimodal AI study prep, or 3D engineering graphics.</p>
+      </div>
+
+      <div class="cards-grid">
+        
+        <div class="hub-card" onclick="navigateTo('view-timetable')">
+          <div>
+            <div class="card-icon-box icon-blue">&#128197;</div>
+            <h2 class="card-title">Timetable &amp; Class Radar</h2>
+            <p class="card-desc">Daily lecture timeline, faculty venues, smart 5m/10m reminder alarms, tomorrow's forecast, and sticky notes.</p>
+            <div class="card-tags">
+              <span class="tag-chip">Smart Bell</span>
+              <span class="tag-chip">Sticky Notes</span>
+              <span class="tag-chip">Tomorrow Radar</span>
+            </div>
+          </div>
+          <button class="btn-open btn-blue">
+            <span>Launch Timetable</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+        <div class="hub-card" onclick="navigateTo('view-attendance')">
+          <div>
+            <div class="card-icon-box icon-green">&#127891;</div>
+            <h2 class="card-title">Attendance &amp; Bunk Shishya</h2>
+            <p class="card-desc">Credit-weighted attendance engine tracking the 75% cutoff with live margin buffers and safe bunk advice.</p>
+            <div class="card-tags">
+              <span class="tag-chip">Credit System</span>
+              <span class="tag-chip">ಬಂಕ್ ಶಿಷ್ಯ Advisor</span>
+              <span class="tag-chip">75% Safe-Zone</span>
+            </div>
+          </div>
+          <button class="btn-open btn-green">
+            <span>Open Attendance Tracker</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+        <div class="hub-card" onclick="navigateTo('view-desi-ai')">
+          <div>
+            <div class="card-icon-box icon-amber">&#129489;&#8205;&#127979;</div>
+            <h2 class="card-title">Desi AI Studio &amp; PDF Parser</h2>
+            <p class="card-desc">Line-by-line notes &amp; paper analysis powered by Gemini with authentic Desi Sir classroom voice &amp; "raaga".</p>
+            <div class="card-tags">
+              <span class="tag-chip">PDF Analyzer</span>
+              <span class="tag-chip">Raaga Audio Voice</span>
+              <span class="tag-chip">Expected IA Trends</span>
+            </div>
+          </div>
+          <button class="btn-open btn-amber">
+            <span>Enter AI Classroom</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+        <div class="hub-card" onclick="navigateTo('view-warroom')">
+          <div>
+            <div class="card-icon-box icon-rose">&#9889;</div>
+            <h2 class="card-title">Night-Before IA War-Room</h2>
+            <p class="card-desc">Emergency exam countdown, 8-mark derivation flashcards, and an AI voice external viva interrogator.</p>
+            <div class="card-tags">
+              <span class="tag-chip">Countdown Timer</span>
+              <span class="tag-chip">Derivation Cards</span>
+              <span class="tag-chip">Viva Voice Sim</span>
+            </div>
+          </div>
+          <button class="btn-open btn-rose">
+            <span>Enter War-Room</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+        <div class="hub-card" onclick="navigateTo('view-caeg')">
+          <div>
+            <div class="card-icon-box icon-cyan">&#128293;</div>
+            <h2 class="card-title">CAEG 3D Reality Engine</h2>
+            <p class="card-desc">Prompt-to-3D projection builder showing unhidden construction, HP/VP tilts, and Front/Top orthographic views.</p>
+            <div class="card-tags">
+              <span class="tag-chip">3D Canvas Orbit</span>
+              <span class="tag-chip">HP/VP Tilting</span>
+              <span class="tag-chip">Orthographic Views</span>
+            </div>
+          </div>
+          <button class="btn-open btn-cyan">
+            <span>Launch 3D Visualizer</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+        <div class="hub-card" onclick="navigateTo('view-profile')">
+          <div>
+            <div class="card-icon-box icon-purple">&#128100;</div>
+            <h2 class="card-title">Student Profile &amp; Device Sync</h2>
+            <p class="card-desc">Google OAuth2 authentication, university stream onboarding (P/C-Cycle, Section, SRN), and push notifications.</p>
+            <div class="card-tags">
+              <span class="tag-chip">Google Auth</span>
+              <span class="tag-chip">SRN: 113995</span>
+              <span class="tag-chip">Wake-Up Push</span>
+            </div>
+          </div>
+          <button class="btn-open btn-purple">
+            <span>Configure Profile</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="bottom-status-strip">
+        <div class="status-left">
+          <div class="live-dot"></div>
+          <div class="status-text">
+            Active Period: <strong>Physics for Computing (Hall 204, B-Block)</strong>
+          </div>
+        </div>
+        <div class="status-meta">
+          09:00 AM – 10:00 AM • IST (UTC+05:30) • AI1 System Live
+        </div>
+      </div>
+    </section>
+
+    <section id="view-timetable" class="app-view">
+      <div class="nav-strip">
+        <button class="btn-back" onclick="navigateTo('view-hub')">
+          <span>&larr;</span> Back to Main Hub
+        </button>
+        <div class="pill-group">
+          <button class="pill active" onclick="switchDay('today', this)">Today (Thursday)</button>
+          <button class="pill" onclick="switchDay('tomorrow', this)">Tomorrow's Radar &#128302;</button>
+          <button class="pill" onclick="switchDay('full', this)">Full Week Matrix</button>
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="calm-card" id="timetableList">
+          </div>
+
+        <div class="note-panel">
+          <div class="calm-box">
+            <div class="box-heading">
+              <span>Subject Sticky Note</span>
+              <span style="font-size: 11px; color: var(--accent-cyan);" id="activeNoteSubject">Physics</span>
+            </div>
+            <textarea id="stickyInput" class="sticky-area" placeholder="Type quick notes, lab submission reminders, or quiz announcements..."></textarea>
+            <button class="btn-save-note" onclick="saveStickyNote()">Save Note</button>
+          </div>
+
+          <div class="calm-box">
+            <div class="box-heading">Hardware Wake-Up Alarms</div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5;">
+              Enable device wake-up triggers to chime your laptop or Android phone before class starts.
+            </p>
+            <button class="btn-chip chip-present" style="width: 100%; padding: 8px;" onclick="requestWakeUpPermission()">
+              &#128276; Request Device Permissions
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-attendance" class="app-view">
+      <div class="nav-strip">
+        <button class="btn-back" onclick="navigateTo('view-hub')">
+          <span>&larr;</span> Back to Main Hub
+        </button>
+        <div style="font-size: 13px; color: var(--accent-amber); font-weight: 600;">
+          University Threshold: 75.0% Mandatory Cutoff
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="calm-card" id="attendanceList">
+          </div>
+
+        <div class="note-panel">
+          <div class="shishya-peek">
+            <div class="shishya-title">&#129504; Bunk Shishya (ಬಂಕ್ ಶಿಷ್ಯ) Advisor</div>
+            <div class="shishya-message" id="bunkShishyaAdvice">
+              Select any subject to calculate your precise bunking margin buffer and risk forecast.
+            </div>
+          </div>
+
+          <div class="calm-box">
+            <div class="box-heading">Credit Weightage Rules</div>
+            <ul style="font-size: 12px; color: var(--text-muted); line-height: 1.6; padding-left: 16px;">
+              <li><strong>Theory (4 or 3 Credits):</strong> 4/3 Lectures / Week.</li>
+              <li><strong>Labs (2 Credits):</strong> 2 Contact Hours / Practical Sessions / Week.</li>
+              <li><strong>Minimum Safe Attendance:</strong> 75% aggregate to qualify for Semester End Exams (SEE).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-desi-ai" class="app-view">
+      <div class="nav-strip">
+        <button class="btn-back" onclick="navigateTo('view-hub')">
+          <span>&larr;</span> Back to Main Hub
+        </button>
+
+        <div class="persona-toggle-bar">
+          <button class="persona-btn active-desi" id="btnPersonaDesi" onclick="setPersona('desi')">
+            &#129489;&#8205;&#127979; Desi Sir Mode (Classroom Raaga)
+          </button>
+          <button class="persona-btn" id="btnPersonaAcademic" onclick="setPersona('academic')">
+            &#127891; Formal Professor Mode
+          </button>
+        </div>
+      </div>
+
+      <div class="canvas-grid">
+        <div class="doc-panel">
+          <div class="section-label">
+            <span>DOCUMENT INGESTION</span>
+            <span style="font-size: 10px; color: var(--accent-cyan);">Gemini 1.5 Flash</span>
+          </div>
+
+          <div class="drop-box" onclick="document.getElementById('pdfInput').click()">
+            <input type="file" id="pdfInput" accept=".pdf,.txt,.doc,.docx" style="display: none;" onchange="handleFileUpload(event)">
+            <div class="drop-icon">&#128196;</div>
+            <div class="drop-title" id="uploadStatusText">Upload Notes, Question Paper or PPT</div>
+            <div class="drop-sub">Click to select PDF or Drag and Drop</div>
+          </div>
+
+          <div class="section-label" style="margin-top: 10px;">
+            <span>WHAT SHOULD I DO WITH THIS PDF?</span>
+          </div>
+
+          <div class="directives-container">
+            <button class="directive-btn active" onclick="executeDirective('clarity', this)">
+              <div>
+                <div style="font-weight: 600;">1. Line-by-Line Concept Clarity</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Deconstruct derivations simply</div>
+              </div>
+              <span class="directive-tag">Clarity</span>
+            </button>
+            <button class="directive-btn" onclick="executeDirective('trends', this)">
+              <div>
+                <div style="font-weight: 600;">2. Expected IA &amp; Exam Questions</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Probable 8-mark derivation trends</div>
+              </div>
+              <span class="directive-tag">Predictor</span>
+            </button>
+            <button class="directive-btn" onclick="executeDirective('quiz', this)">
+              <div>
+                <div style="font-weight: 600;">3. Quick 5-Question Quiz</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Test recall before class</div>
+              </div>
+              <span class="directive-tag">Quiz</span>
+            </button>
+            <button class="directive-btn" onclick="executeDirective('lecture', this)">
+              <div>
+                <div style="font-weight: 600;">4. Full Classroom Lecture Mode</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Audio lecture with local cadence</div>
+              </div>
+              <span class="directive-tag">Audio</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="chat-panel">
+          <div class="chat-header">
+            <div class="persona-badge" id="chatHeaderBadge">
+              &#129489;&#8205;&#127979; Desi Sir: Prof. Sreenivas Sir (Physics)
+            </div>
+            <button class="speech-btn" onclick="playCurrentDialogueAudio()">
+              &#128266; Play in Classroom Raaga Voice
+            </button>
+          </div>
+
+          <div class="messages-stream" id="chatStream">
+            <div class="msg-desi">
+              <div class="exam-warning-chip">&#9888; 100% IA-1 CONFIRMED QUESTION</div>
+              <p>
+                Listen carefully backbenchers! Don't look at the window, see the board! In this PDF on <strong>Page 7</strong>, they gave <em>Maxwell's 4th Equation &amp; Displacement Current</em>.
+              </p>
+              <p style="margin-top: 8px;">
+                Every single year students make same mistake in Ampere's circuital law correction. Take one clean pen and paper, don't just stare... <span class="raaga-hook">writeee downnn!</span>
+              </p>
+              <div class="desi-chalkboard">
+                &nabla; &times; B = &mu;&#8320; ( J + &epsilon;&#8320; &part;E/&part;t )<br>
+                &rarr; Term 1 = Conduction Current (Wire)<br>
+                &rarr; Term 2 = Displacement Current (Capacitor plates gap)
+              </div>
+              <p style="margin-top: 6px;">
+                Understand first! If capacitor gap has no physical wires, how magnetic field is coming? Because time-varying electric field produces magnetic field! Remember this, or in lab viva external examiner will ask simple question and you will just look at ceiling fan. Now tell me, should I test you on one 3-mark problem?
+              </p>
+            </div>
+          </div>
+
+          <div class="query-input-bar">
+            <input type="text" id="userChatInput" class="chat-input" placeholder="Ask Sir to explain in Kannada-English or generate expected questions..." onkeypress="handleChatKey(event)">
+            <button class="btn-send" onclick="sendChatMessage()">Ask Sir</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-warroom" class="app-view">
+      <div class="nav-strip">
+        <button class="btn-back" onclick="navigateTo('view-hub')">
+          <span>&larr;</span> Back to Main Hub
+        </button>
+        <div style="font-size: 13px; color: var(--accent-rose); font-weight: 700;">
+          &#9201; COUNTDOWN: 05h 42m UNTIL IA-1 COMMENCES
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="calm-card">
+          <h3 style="font-size: 16px; margin-bottom: 12px; color: #f8fafc;">Top 8-Mark Guaranteed Derivations</h3>
+          
+          <div class="class-item">
+            <div class="item-top">
+              <span class="subj-title">1. Maxwell's 4th Equation &amp; Displacement Current</span>
+              <span class="subj-credits">PHY101</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin: 6px 0;">
+              Derive Ampere-Maxwell law starting from &nabla; &middot; J = -&part;&rho;/&part;t.
+            </p>
+            <button class="btn-chip chip-present" onclick="toggleDerivationAnswer('ans1')">&#128065; Reveal Steps</button>
+            <div id="ans1" class="desi-chalkboard" style="display: none; margin-top: 8px;">
+              Step 1: &nabla; &times; B = &mu;&#8320; J (Ampere's original)<br>
+              Step 2: Take divergence: &nabla; &middot; (&nabla; &times; B) = 0<br>
+              Step 3: But &nabla; &middot; J = -&part;&rho;/&part;t &ne; 0 (Contradiction!)<br>
+              Step 4: Add displacement current: J_d = &epsilon;&#8320; &part;E/&part;t
+            </div>
+          </div>
+
+          <div class="class-item">
+            <div class="item-top">
+              <span class="subj-title">2. Star-Delta Transformation (3-Phase)</span>
+              <span class="subj-credits">BEE102</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin: 6px 0;">
+              Equate terminal resistances between pairs (R_AB, R_BC, R_CA).
+            </p>
+            <button class="btn-chip chip-present" onclick="toggleDerivationAnswer('ans2')">&#128065; Reveal Steps</button>
+            <div id="ans2" class="desi-chalkboard" style="display: none; margin-top: 8px;">
+              R_A = (R_AB &times; R_CA) / (R_AB + R_BC + R_CA)<br>
+              R_B = (R_BC &times; R_AB) / (R_AB + R_BC + R_CA)<br>
+              R_C = (R_CA &times; R_BC) / (R_AB + R_BC + R_CA)
+            </div>
+          </div>
+        </div>
+
+        <div class="note-panel">
+          <div class="calm-box" style="border-color: rgba(244, 63, 94, 0.3);">
+            <div class="box-heading" style="color: var(--accent-rose);">
+              <span>AI External Viva Interrogator</span>
+              <span style="font-size: 10px;">Strict Mode</span>
+            </div>
+            <p style="font-size: 12.5px; color: #cbd5e1; line-height: 1.5; margin-bottom: 12px;">
+              The AI External Examiner will question you on essential lab concepts.
+            </p>
+            <button class="btn-chip chip-missed" style="width: 100%; padding: 10px; font-weight: 700;" onclick="triggerVivaQuestion()">
+              &#127897; Ask Me A Rapid Viva Question!
+            </button>
+            <div id="vivaQuestionBox" class="sticky-content" style="margin-top: 12px; display: none;">
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-caeg" class="app-view">
+      <div class="nav-strip">
+        <button class="btn-back" onclick="navigateTo('view-hub')">
+          <span>&larr;</span> Back to Main Hub
+        </button>
+        <div style="font-size: 13px; color: var(--accent-cyan); font-weight: 600;">
+          Interactive Engineering Graphics (CAEG) Visualizer
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="calm-card" style="padding: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="font-weight: 600; font-size: 14px;">3D Solid &amp; Orthographic Projections</span>
+            <div class="pill-group" style="margin-bottom: 0;">
+              <button class="pill active" onclick="setCaegStage(1, this)">Stage 1: Simple Position</button>
+              <button class="pill" onclick="setCaegStage(2, this)">Stage 2: Tilt to HP (45&deg;)</button>
+              <button class="pill" onclick="setCaegStage(3, this)">Stage 3: Tilt to VP (30&deg;)</button>
+            </div>
+          </div>
+
+          <canvas id="caegCanvas" width="700" height="420" style="width: 100%; height: 420px; background: #030712; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2);"></canvas>
+          <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted); margin-top: 6px;">
+            <span>XY Reference Line Active</span>
+            <span>Front View (Elevation) / Top View (Plan)</span>
+          </div>
+        </div>
+
+        <div class="note-panel">
+          <div class="calm-box">
+            <div class="box-heading">CAEG Question Input</div>
+            <textarea id="caegPrompt" class="sticky-area" style="height: 90px;" placeholder="Paste exam question e.g. 'A square pyramid of 35mm base rests on HP on one of its base edges with axis inclined 45 deg to HP...'"></textarea>
+            <button class="btn-chip chip-present" style="width: 100%; padding: 8px; margin-top: 8px;" onclick="parseCaegPrompt()">
+              Generate Step-by-Step 3D Construction
+            </button>
+          </div>
+
+          <div class="calm-box">
+            <div class="box-heading">Step-by-Step Construction Guide</div>
+            <div id="caegStepsLog" style="font-size: 12px; color: #cbd5e1; line-height: 1.6;">
+              1. Draw True Shape of Base in Top View (Square 35&times;35mm).<br>
+              2. Project elevation to $X-Y$ line to draw Front View triangular face.<br>
+              3. Tilt base edge on $X-Y$ line by 45&deg; to HP.<br>
+              4. Project lines downwards to reconstruct tilted Top View.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-profile" class="app-view">
+      <div class="nav-strip">
+        <button class="btn-back" onclick="navigateTo('view-hub')">
+          <span>&larr;</span> Back to Main Hub
+        </button>
+      </div>
+
+      <div style="max-width: 680px; margin: 0 auto; width: 100%;">
+        <div class="calm-card">
+          <h2 style="font-size: 18px; margin-bottom: 6px; color: #f8fafc;">Student Identity &amp; University Setup</h2>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+            Your academic session is secured with Google Identity and locked to 1st Year Sapthagiri NPS University.
+          </p>
+
+          <div class="profile-field">
+            <label class="field-label">Full Name</label>
+            <input type="text" id="profName" class="field-input" value="Tanish B R">
+          </div>
+
+          <div class="profile-field">
+            <label class="field-label">Institution (Campus Restricted)</label>
+            <input type="text" class="field-input" value="Sapthagiri NPS University" disabled style="opacity: 0.7;">
+          </div>
+
+          <div class="profile-field">
+            <label class="field-label">Student Registration Number (SRN)</label>
+            <input type="text" id="profSrn" class="field-input" value="113995">
+          </div>
+
+          <div class="profile-field">
+            <label class="field-label">Academic Cycle &amp; Branch</label>
+            <select id="profCycle" class="field-input">
+              <option value="P-Cycle // CSE" selected>P-Cycle // Computer Science &amp; Engineering (CSE)</option>
+              <option value="P-Cycle // AI&DS">P-Cycle // Artificial Intelligence &amp; Data Science (AI&amp;DS)</option>
+              <option value="C-Cycle // ECE">C-Cycle // Electronics &amp; Communication (ECE)</option>
+              <option value="C-Cycle // MECH">C-Cycle // Mechanical Engineering</option>
+            </select>
+          </div>
+
+          <div class="profile-field">
+            <label class="field-label">Section / Batch</label>
+            <input type="text" id="profSection" class="field-input" value="Section A (Batch 1)">
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 20px;">
+            <button class="btn-chip chip-present" style="padding: 10px 20px; font-size: 13px;" onclick="saveProfile()">
+              Save Identity Settings
+            </button>
+            <button class="btn-chip chip-noclass" style="padding: 10px 20px; font-size: 13px;" onclick="simulateGoogleSignIn()">
+              Simulate Google Identity OAuth2 Sync
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
