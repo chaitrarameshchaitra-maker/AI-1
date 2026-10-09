@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#70a9fa" />
+<title>AI-1 / Dr. Schedly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="aurora-bg"></div>
+<div class="grain-overlay"></div>
+<a href="#slides" class="skip-link">Skip to main content</a>
+
+<header class="app-header">
+  <div class="brand">
+    <div class="brand-mark"><span class="brand-dot"></span><span class="brand-dot"></span></div>
+    <h1 class="brand-title">AI-1 <span class="brand-divider">//</span> <span class="brand-accent">Dr. Schedly</span></h1>
+    <span class="brand-tag">Sapthagiri NPS University</span>
+  </div>
+  <div class="header-right">
+    <div class="mascot-picker">
+      <span class="mascot-label">Mascot:</span>
+      <button class="mascot-btn mascot-active" data-mascot="panda" aria-label="Panda">🐼</button>
+      <button class="mascot-btn" data-mascot="lizard" aria-label="Lizard">🦎</button>
+      <button class="mascot-btn" data-mascot="roach" aria-label="Roach">🪳</button>
+    </div>
+    <button class="profile-badge" id="profileBadge">
+      <span class="profile-avatar" id="profileAvatar">TB</span>
+      <span class="profile-meta">
+        <span class="profile-name" id="profileName">Tanish B R</span>
+        <span class="profile-sub" id="profileSub">SRN: 113995 · 1CSE01</span>
+      </span>
+    </button>
+  </div>
+</header>
+
+<nav class="tab-nav" role="tablist">
+  <button class="tab tab-active" data-tab="0" role="tab" aria-selected="true">1. Your Class (Live)</button>
+  <button class="tab" data-tab="1" role="tab" aria-selected="false">2. Attendance (Bunk Shishya)</button>
+  <button class="tab" data-tab="2" role="tab" aria-selected="false">3. Learn &amp; Desi AI Guru</button>
+  <button class="tab" data-tab="3" role="tab" aria-selected="false">4. CGPA / SGPA Engine</button>
+</nav>
+
+<div class="slides-viewport">
+  <main class="slides-track" id="slides" role="tabpanel">
+
+    <!-- ============================ SLIDE 1 ============================ -->
+    <section class="slide" id="slide-0">
+      <div class="slide-grid">
+        <div class="slide-col-main">
+          <div class="glass-card">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title">Today's Class Schedule</h2>
+                <p class="card-sub"><span class="pulse-dot"></span><span id="todayDateLabel">—</span></p>
+              </div>
+              <label class="section-picker">
+                <span class="section-label">Section:</span>
+                <select id="sectionSelect"></select>
+              </label>
+            </div>
+            <div class="advisor-row">
+              <span class="advisor-label">Advisor</span>
+              <span class="advisor-name" id="advisorName">—</span>
+              <span class="cycle-tag" id="cycleTag">—</span>
+            </div>
+            <div class="class-list" id="todayClassList"></div>
+            <div class="empty-state" id="todayEmptyState" hidden>
+              <div class="empty-icon">🌤️</div>
+              <h3>No classes today</h3>
+              <p>—</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-col-side">
+          <div class="glass-card radar-card">
+            <div class="radar-head"><span class="radar-badge">CRITICAL RADAR</span><span class="radar-rule">75% Margin Rule</span></div>
+            <h3 class="card-title" style="margin-bottom:4px">Attendance Shortage Subjects</h3>
+            <div class="radar-list" id="radarList"><div class="radar-empty">All subjects above 75% — you're safe.</div></div>
+          </div>
+          <div class="glass-card">
+            <div class="card-head">
+              <h3 class="card-title">Tomorrow's Schedule</h3>
+              <button class="alarm-btn" id="alarmBtn" aria-pressed="false">🔔 <span id="alarmState">(OFF)</span></button>
+            </div>
+            <div class="tomorrow-list" id="tomorrowList"></div>
+          </div>
+          <div class="glass-card">
+            <div class="card-head"><h3 class="card-title">@ Sticky Notes</h3><button class="link-btn" id="clearNotesBtn">Clear</button></div>
+            <textarea id="stickyNotes" class="sticky-input" rows="4" placeholder="Write reminders..."></textarea>
+            <div class="sticky-footer"><span class="sticky-saved" id="stickySaved">Auto-saved</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SLIDE 2 ============================ -->
+    <section class="slide" id="slide-1">
+      <div class="glass-card">
+        <div class="card-head">
+          <div>
+            <h2 class="card-title">Attendance (Bunk Shishya)</h2>
+            <p class="card-sub">Tap +1 to log attendance. All subjects start at 0.</p>
+          </div>
+        </div>
+        <div class="attendance-list" id="attendanceList"></div>
+      </div>
+    </section>
+
+    <!-- ============================ SLIDE 3 ============================ -->
+    <section class="slide" id="slide-2">
+      <div class="slide-grid">
+        <div class="slide-col-main">
+          <div class="glass-card">
+            <div class="card-head">
+              <h3 class="card-title">Document Shelf</h3>
+              <label class="btn btn-primary">
+                + Upload PDF
+                <input id="pdfInput" type="file" accept=".pdf,.txt,.md,.doc,.docx" style="display:none" />
+              </label>
+            </div>
+            <div class="pdf-list" id="pdfList"></div>
+          </div>
+        </div>
+        <div class="slide-col-side">
+          <div class="glass-card">
+            <div class="card-head"><h3 class="card-title">Desi AI Guru</h3></div>
+            <div class="chat-log" id="aiChatLog">
+              <div class="chat-ai">Hi! Ask about "next class", "tomorrow", or "attendance".</div>
+            </div>
+            <div class="chat-input-row">
+              <input id="aiChatInput" class="chat-input" placeholder="Ask something..." />
+              <button id="aiChatSend" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SLIDE 4 ============================ -->
+    <section class="slide" id="slide-3">
+      <div class="slide-grid">
+        <div class="slide-col-main">
+          <div class="glass-card">
+            <div class="card-head">
+              <h2 class="card-title">CGPA / SGPA Engine</h2>
+              <p class="card-sub">Pick your grade per subject.</p>
+            </div>
+            <div class="cgpa-list" id="cgpaList"></div>
+          </div>
+        </div>
+        <div class="slide-col-side">
+          <div class="glass-card cgpa-summary">
+            <div class="cgpa-big" id="cgpaValue">0.00</div>
+            <div class="cgpa-label">CGPA</div>
+            <div class="cgpa-sub" id="cgpaSub">Enter grades to see CGPA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="mascot-cursor" id="mascotCursor">🐼</div>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="auth.js"></script>
+<script src="app.js" type="module"></script>
+</body>
+</html>
